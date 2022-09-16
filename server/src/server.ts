@@ -37,8 +37,8 @@ app.get('/games/:id/ads', async (request, response) => {
             weekDays: true,
             useVoiceChannel: true,
             yearsPlaying: true,
-            hoursStart: true,
-            hoursEnd: true
+            hourStart: true,
+            hourEnd: true
         },
         where: {
             gameId: id
@@ -51,8 +51,8 @@ app.get('/games/:id/ads', async (request, response) => {
     response.status(200).json(ads.map(ad => {
         return {
             ...ad,
-            hoursStart: convertMinutesToHoursString(ad.hoursStart),
-            hoursEnd: convertMinutesToHoursString(ad.hoursEnd),
+            hourStart: convertMinutesToHoursString(ad.hourStart),
+            hourEnd: convertMinutesToHoursString(ad.hourEnd),
             weekDays: ad.weekDays.split(',')
         }
     }))
@@ -65,8 +65,8 @@ app.post('/games/:id/ads', async (request, response) => {
         yearsPlaying,
         discord,
         weekDays,
-        hoursStart,
-        hoursEnd,
+        hourStart,
+        hourEnd,
         useVoiceChannel
     } = request.body
 
@@ -78,8 +78,8 @@ app.post('/games/:id/ads', async (request, response) => {
             yearsPlaying,
             discord,
             weekDays: weekDays.join(','),
-            hoursStart: convertHoursStringToMinutes(hoursStart),
-            hoursEnd: convertHoursStringToMinutes(hoursEnd),
+            hourStart: convertHoursStringToMinutes(hourStart),
+            hourEnd: convertHoursStringToMinutes(hourEnd),
             useVoiceChannel
         }
     })
