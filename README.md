@@ -51,7 +51,10 @@ Install esports backend
 
 ## Demo
 
-[![Click here](https://i.imgur.com/KzPbg7d.png)](https://youtu.be/vt5fpE0bzSY)
+
+Live [preview](https://i.imgur.com/hncMMOZ.mp4)
+
+[![Click here](https://i.imgur.com/KzPbg7d.png)](https://i.imgur.com/hncMMOZ.mp4)
 
 
 ## Features
