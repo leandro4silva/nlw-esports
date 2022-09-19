@@ -11,8 +11,9 @@ export function CreateAdBanner() {
                 </div>
 
                 <Dialog.Trigger 
-                className='py-3 px-4 bg-violet-500 text-white 
-                rounded-md hover:bg-violet-600 flex items-center gap-3'>
+                    className='py-3 px-4 bg-violet-500 text-white 
+                    rounded-md hover:bg-violet-600 flex items-center gap-3'
+                >
                         <MagnifyingGlassPlus size={24} /> Publicar anúncio
                 </Dialog.Trigger>
               
